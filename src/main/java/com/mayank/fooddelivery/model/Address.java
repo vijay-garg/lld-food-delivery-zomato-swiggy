@@ -10,9 +10,9 @@ import lombok.ToString;
 @Getter
 @ToString
 public class Address {
-    private String id;
-    private String streetAddress;
-    private String city;
-    private String zipCode;
-    private Location location;
+  private String id;
+  private String streetAddress;
+  private String city;
+  private String zipCode;
+  private Location location;
 }

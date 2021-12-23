@@ -1,8 +1,8 @@
 package com.mayank.fooddelivery.model;
 
-public enum  PaymentStatus {
-    PENDING,
-    APPROVED,
-    DECLINED,
-    TIMEOUT
+public enum PaymentStatus {
+  PENDING,
+  APPROVED,
+  DECLINED,
+  TIMEOUT
 }

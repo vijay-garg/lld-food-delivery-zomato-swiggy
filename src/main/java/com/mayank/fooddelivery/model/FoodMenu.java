@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 @ToString
 public class FoodMenu {
-    private String id;
-    private List<String> restaurantIds;
-    private List<MenuItem> menuItemList;
+  private String id;
+  private List<String> restaurantIds;
+  private List<MenuItem> menuItemList;
 }

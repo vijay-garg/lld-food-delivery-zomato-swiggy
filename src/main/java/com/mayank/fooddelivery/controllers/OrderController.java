@@ -12,30 +12,30 @@ import java.util.List;
 
 @RestController
 public class OrderController {
-    private OrderService orderService;
+  private OrderService orderService;
 
-    @Autowired
-    public OrderController(OrderService orderService) {
-        this.orderService = orderService;
-    }
+  @Autowired
+  public OrderController(OrderService orderService) {
+    this.orderService = orderService;
+  }
 
-    @PostMapping(value = "/user/{userId}/order/update")
-    public void updateOrder(final Order order, final OrderCommandType orderCommandType) {
-        orderService.updateOrder(order, orderCommandType);
-    }
+  @PostMapping(value = "/user/{userId}/order/update")
+  public void updateOrder(final Order order, final OrderCommandType orderCommandType) {
+    orderService.updateOrder(order, orderCommandType);
+  }
 
-    @GetMapping(value = "/order/{orderId}")
-    public Order getOrderById(final String orderId) {
-        return orderService.getOrderById(orderId);
-    }
+  @GetMapping(value = "/order/{orderId}")
+  public Order getOrderById(final String orderId) {
+    return orderService.getOrderById(orderId);
+  }
 
-    @GetMapping(value = "/user/{userId}/order")
-    public List<Order> getAllOrders(final String userId) {
-        return orderService.getAllOrders(userId);
-    }
+  @GetMapping(value = "/user/{userId}/order")
+  public List<Order> getAllOrders(final String userId) {
+    return orderService.getAllOrders(userId);
+  }
 
-    @GetMapping(value = "/user/{userId}/order/{restaurantId}")
-    public List<Order> getAllOrdersByRestaurantId(final String userId, final String restaurantId) {
-        return orderService.getAllOrdersByRestaurantId(userId, restaurantId);
-    }
+  @GetMapping(value = "/user/{userId}/order/{restaurantId}")
+  public List<Order> getAllOrdersByRestaurantId(final String userId, final String restaurantId) {
+    return orderService.getAllOrdersByRestaurantId(userId, restaurantId);
+  }
 }

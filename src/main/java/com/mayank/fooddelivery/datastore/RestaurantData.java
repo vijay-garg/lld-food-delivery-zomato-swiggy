@@ -11,7 +11,7 @@ import java.util.Map;
 @Component
 @Getter
 public class RestaurantData {
-    private Map<String, Restaurant> restaurantById = new HashMap<>();
-    private Map<String, List<String>> restaurantIdsByName = new HashMap<>();
-    private Map<String, List<String>> restaurantIdsByCity = new HashMap<>();
+  private Map<String, Restaurant> restaurantById = new HashMap<>();
+  private Map<String, List<String>> restaurantIdsByName = new HashMap<>();
+  private Map<String, List<String>> restaurantIdsByCity = new HashMap<>();
 }

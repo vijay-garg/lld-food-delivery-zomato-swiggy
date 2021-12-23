@@ -11,7 +11,6 @@ import java.util.Map;
 @Component
 @Getter
 public class OrderData {
-    private Map<String, Order> orderById = new HashMap<>();
-    private Map<String, List<String>> orderIdsByUserId = new HashMap<>();
-
+  private Map<String, Order> orderById = new HashMap<>();
+  private Map<String, List<String>> orderIdsByUserId = new HashMap<>();
 }

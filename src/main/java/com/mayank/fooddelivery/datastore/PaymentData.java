@@ -10,6 +10,6 @@ import java.util.Map;
 @Component
 @Getter
 public class PaymentData {
-    private Map<String, Payment> paymentById = new HashMap<>();
-    private Map<String, String> paymentIdByOrderId = new HashMap<>();
+  private Map<String, Payment> paymentById = new HashMap<>();
+  private Map<String, String> paymentIdByOrderId = new HashMap<>();
 }

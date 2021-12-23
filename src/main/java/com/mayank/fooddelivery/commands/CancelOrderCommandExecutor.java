@@ -8,28 +8,28 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CancelOrderCommandExecutor extends OrderCommandExecutor {
-    private OrderData orderData;
+  private OrderData orderData;
 
-    @Autowired
-    public CancelOrderCommandExecutor(OrderData orderData) {
-        this.orderData = orderData;
-    }
+  @Autowired
+  public CancelOrderCommandExecutor(OrderData orderData) {
+    this.orderData = orderData;
+  }
 
-    @Override
-    public boolean isValid(Order order) {
-        if (!orderData.getOrderById().containsKey(order.getId())) {
-            return false;
-        }
-        return true;
+  @Override
+  public boolean isValid(Order order) {
+    if (!orderData.getOrderById().containsKey(order.getId())) {
+      return false;
     }
+    return true;
+  }
 
-    @Override
-    public void executeCommand(Order order) {
-        order.markOrderCancelled();
-    }
+  @Override
+  public void executeCommand(Order order) {
+    order.markOrderCancelled();
+  }
 
-    @Override
-    public boolean isApplicable(OrderCommandType orderCommandType) {
-        return orderCommandType == OrderCommandType.CANCEL;
-    }
+  @Override
+  public boolean isApplicable(OrderCommandType orderCommandType) {
+    return orderCommandType == OrderCommandType.CANCEL;
+  }
 }

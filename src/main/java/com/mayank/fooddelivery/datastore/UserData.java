@@ -10,5 +10,5 @@ import java.util.Map;
 @Component
 @Getter
 public class UserData {
-    private Map<String, User> userById = new HashMap<>();
+  private Map<String, User> userById = new HashMap<>();
 }

@@ -10,9 +10,9 @@ import lombok.ToString;
 @Getter
 @ToString
 public class Bill {
-    private String id;
-    private double totalCost;
-    private double discount;
-    private double tax;
-    private double amountToBePaid;
+  private String id;
+  private double totalCost;
+  private double discount;
+  private double tax;
+  private double amountToBePaid;
 }

@@ -12,32 +12,33 @@ import java.util.List;
 
 @Component
 public class PlaceOrderCommandExecutor extends OrderCommandExecutor {
-    private OrderData orderData;
+  private OrderData orderData;
 
-    @Autowired
-    public PlaceOrderCommandExecutor(OrderData orderData) {
-        this.orderData = orderData;
-    }
+  @Autowired
+  public PlaceOrderCommandExecutor(OrderData orderData) {
+    this.orderData = orderData;
+  }
 
-    @Override
-    public boolean isValid(Order order) {
-        if (!(order.getOrderStatus() == OrderStatus.PENDING)) {
-            return false;
-        }
-        return true;
+  @Override
+  public boolean isValid(Order order) {
+    if (!(order.getOrderStatus() == OrderStatus.PENDING)) {
+      return false;
     }
+    return true;
+  }
 
-    @Override
-    public void executeCommand(Order order) {
-        orderData.getOrderById().put(order.getId(), order);
-        List<String> orderIds = orderData.getOrderIdsByUserId().getOrDefault(order.getUserId(), new ArrayList<>());
-        orderIds.add(order.getId());
-        orderData.getOrderIdsByUserId().put(order.getUserId(), orderIds);
-        order.markOrderWaitingForPayment();
-    }
+  @Override
+  public void executeCommand(Order order) {
+    orderData.getOrderById().put(order.getId(), order);
+    List<String> orderIds =
+        orderData.getOrderIdsByUserId().getOrDefault(order.getUserId(), new ArrayList<>());
+    orderIds.add(order.getId());
+    orderData.getOrderIdsByUserId().put(order.getUserId(), orderIds);
+    order.markOrderWaitingForPayment();
+  }
 
-    @Override
-    public boolean isApplicable(OrderCommandType orderCommandType) {
-        return orderCommandType == OrderCommandType.PLACE;
-    }
+  @Override
+  public boolean isApplicable(OrderCommandType orderCommandType) {
+    return orderCommandType == OrderCommandType.PLACE;
+  }
 }

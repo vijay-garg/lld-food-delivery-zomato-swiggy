@@ -6,9 +6,8 @@ import com.mayank.fooddelivery.model.MenuItem;
 
 import java.util.List;
 
-
 public interface PricingStrategy {
-    Bill generateBill(List<MenuItem> menuItemList);
+  Bill generateBill(List<MenuItem> menuItemList);
 
-    boolean isApplicable(CouponCode couponCode);
+  boolean isApplicable(CouponCode couponCode);
 }

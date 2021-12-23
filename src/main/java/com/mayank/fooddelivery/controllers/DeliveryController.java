@@ -13,30 +13,30 @@ import java.util.List;
 
 @RestController
 public class DeliveryController {
-    private DeliveryService deliveryService;
+  private DeliveryService deliveryService;
 
-    @Autowired
-    public DeliveryController(DeliveryService deliveryService) {
-        this.deliveryService = deliveryService;
-    }
+  @Autowired
+  public DeliveryController(DeliveryService deliveryService) {
+    this.deliveryService = deliveryService;
+  }
 
-    @PostMapping(value = "/delivery")
-    public void addDelivery(@NonNull final Delivery delivery) {
-        deliveryService.addDelivery(delivery);
-    }
+  @PostMapping(value = "/delivery")
+  public void addDelivery(@NonNull final Delivery delivery) {
+    deliveryService.addDelivery(delivery);
+  }
 
-    @GetMapping(value = "/delivery/{deliveryId}")
-    public Delivery getDeliveryById(@NonNull final String deliveryId) {
-        return deliveryService.getDeliveryById(deliveryId);
-    }
+  @GetMapping(value = "/delivery/{deliveryId}")
+  public Delivery getDeliveryById(@NonNull final String deliveryId) {
+    return deliveryService.getDeliveryById(deliveryId);
+  }
 
-    @GetMapping(value = "/delivery/list/{deliveryBoyId}")
-    public List<Delivery> getDeliveriesByDeliveryBoyId(@NonNull final String deliveryBoyId) {
-        return deliveryService.getDeliveriesByDeliveryBoyId(deliveryBoyId);
-    }
+  @GetMapping(value = "/delivery/list/{deliveryBoyId}")
+  public List<Delivery> getDeliveriesByDeliveryBoyId(@NonNull final String deliveryBoyId) {
+    return deliveryService.getDeliveriesByDeliveryBoyId(deliveryBoyId);
+  }
 
-    @GetMapping(value = "/delivery/orderStatus/{deliveryId}")
-    public OrderStatus getOrderStatus(@NonNull final String deliveryId) {
-        return deliveryService.getOrderStatus(deliveryId);
-    }
+  @GetMapping(value = "/delivery/orderStatus/{deliveryId}")
+  public OrderStatus getOrderStatus(@NonNull final String deliveryId) {
+    return deliveryService.getOrderStatus(deliveryId);
+  }
 }

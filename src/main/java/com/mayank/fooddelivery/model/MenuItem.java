@@ -10,9 +10,9 @@ import lombok.ToString;
 @Getter
 @ToString
 public class MenuItem {
-    private String id;
-    private String itemName;
-    private CuisineType cuisineType;
-    private MealType mealType;
-    private double price;
+  private String id;
+  private String itemName;
+  private CuisineType cuisineType;
+  private MealType mealType;
+  private double price;
 }

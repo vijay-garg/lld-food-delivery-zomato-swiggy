@@ -1,7 +1,9 @@
 # lld-food-delivery-zomato-swiggy
+
 Low Level Design of Food delivery app - Zomato, Swiggy, UberEats
 
 # Requirements
+
 1. Restaurant can register themselves.
 2. User can create, update, delete, get their profiles.
 3. User can search for the restaurant using restaurant name, city name.
@@ -15,6 +17,7 @@ Low Level Design of Food delivery app - Zomato, Swiggy, UberEats
 11. User can get the order status anytime. Success, Out for Delivery, Delivered, etc.
 
 # Services
+
 * [RestaurantService](src/main/java/com/mayank/fooddelivery/services/RestaurantService.java)
 * [UserService](src/main/java/com/mayank/fooddelivery/services/UserService.java)
 * [FoodMenuService](src/main/java/com/mayank/fooddelivery/services/FoodMenuService.java)
@@ -25,4 +28,5 @@ Low Level Design of Food delivery app - Zomato, Swiggy, UberEats
 * [DeliveryService](src/main/java/com/mayank/fooddelivery/services/DeliveryService.java)
 
 # Explanation
+
 [Medium Story](https://medium.com/@mayankbansal933/food-delivery-app-lld-c1409ef49266?source=friends_link&sk=6c753c471dae09bf1fcbe79bee2d8be1)

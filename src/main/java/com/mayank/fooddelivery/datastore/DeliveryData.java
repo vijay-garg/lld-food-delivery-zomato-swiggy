@@ -11,6 +11,6 @@ import java.util.Map;
 @Component
 @Getter
 public class DeliveryData {
-    private Map<String, Delivery> deliveryById = new HashMap<>();
-    private Map<String, List<String>> deliveryIdsByDeliveryBoyId = new HashMap<>();
+  private Map<String, Delivery> deliveryById = new HashMap<>();
+  private Map<String, List<String>> deliveryIdsByDeliveryBoyId = new HashMap<>();
 }

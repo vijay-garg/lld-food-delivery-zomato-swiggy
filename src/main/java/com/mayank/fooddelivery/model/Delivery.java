@@ -12,9 +12,9 @@ import java.util.Date;
 @Getter
 @ToString
 public class Delivery {
-    private String id;
-    private String deliveryBoyId;
-    private String userId;
-    private String orderId;
-    private Date deliveryTime;
+  private String id;
+  private String deliveryBoyId;
+  private String userId;
+  private String orderId;
+  private Date deliveryTime;
 }
